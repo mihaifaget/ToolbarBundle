@@ -5,9 +5,8 @@
 
 <script data-main="{{ this.getResourceUrl('toolbar/src/require.config.js') }}" src="{{ this.getResourceUrl('toolbar/bower_components/requirejs/require.js') }}"></script>
 
-<div id="{{ wrapper }}"
+<div id="bb5-ui"
     data-api="{{ this.getUri('/rest/1/') }}"
-    data-toolbar-selector="true"
     {% if this.isBBUser() %}
     data-autostart
     data-site-uid="{{ this.getCurrentPage().getSite().getUid() }}"
