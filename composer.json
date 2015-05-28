@@ -16,8 +16,8 @@
     "require": {
         "php": ">=5.4.0",
         "incenteev/composer-parameter-handler": "~2.1",
-        "backbee/backbee": "1.0.*@dev",
-        "backbee/bb-core-js": "1.0.*@dev"
+        "backbee/backbee": "1.0",
+        "backbee/bb-core-js": "1.0"
     },
     "autoload": {
         "psr-4": {
