@@ -68,6 +68,23 @@ class Toolbar extends AbstractBundle
     }
 
     /**
+     * Loads ToolbarBundle and BBCoreJs resources directories into application.
+     *
+     * @param  BBApplication $application
+     * @param  Config        $config
+     */
+    public static function loadResources(BBApplication $application, Config $config)
+    {
+        $baseDir = $application->getContainer()->get('bundle.toolbar')->getBaseDirectory();
+        $application->addResourceDir($baseDir.DIRECTORY_SEPARATOR.'Resources');
+        $application->addResourceDir(implode(DIRECTORY_SEPARATOR, [
+            $application->getVendorDir(),
+            'backbee',
+            'bb-core-js',
+        ]));
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function start()

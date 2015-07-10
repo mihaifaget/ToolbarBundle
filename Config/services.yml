@@ -2,6 +2,7 @@
 parameters:
     toolbar.bundle.controller.class: BackBee\Bundle\ToolbarBundle\Controller\ConfigController
     toolbar.bundle.plugin.manager.class: BackBee\Bundle\ToolbarBundle\Plugin\PluginManager
+    bbapp.resource.controller.class: BackBee\Bundle\ToolbarBundle\Controller\ResourceController
 
     error.base_folder: %bbapp.base.dir%/../toolbar-bundle/Resources/layouts/error/
     error.404: 'error.twig'
