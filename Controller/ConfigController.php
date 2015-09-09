@@ -84,9 +84,9 @@ class ConfigController
 
     /**
      * Resolves %resources-baseurl% in settings.
-     * 
+     *
      * @param  array $settings
-     * 
+     *
      * @return array
      */
     private function resolveResourceBaseUrl(array $settings)
@@ -94,8 +94,8 @@ class ConfigController
         array_walk_recursive(
             $settings,
             function (&$item, $key, RouteCollection $routeCollection) {
-                if (0 === strpos($item, '%resources-baseurl%')) {
-                    $item = $routeCollection->getUri(str_replace('%resources-baseurl%', '', $item), '/', null, RouteCollection::RESOURCE_URL);
+                if (0 === strpos($item, '$resources-baseurl$')) {
+                    $item = $routeCollection->getUri(str_replace('$resources-baseurl$', '', $item), '/', null, RouteCollection::RESOURCE_URL);
                 }
             },
             $this->routeCollection
