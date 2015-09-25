@@ -57,7 +57,10 @@ component:
 
     translator:
         base: '$resources-baseurl$/toolbar/src/tb/i18n/'
-        locale: 'en_US'
+        default_locale: 'en_US'
+        locales:
+            en_US: 'EN'
+            fr_FR: 'FR'
 
     medialibrary:
         available_media:
