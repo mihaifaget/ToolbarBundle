@@ -61,6 +61,7 @@ component:
         locales:
             en_US: 'EN'
             fr_FR: 'FR'
+            ru_RU: 'RU'
 
     medialibrary:
         available_media:
