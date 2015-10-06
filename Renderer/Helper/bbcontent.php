@@ -133,8 +133,15 @@ class bbcontent extends AbstractHelper
         $this->computeClassAttribute();
         $this->computeDragAndDropAttributes();
         $this->computeIdentifierAttribute();
+        $this->computeRendermodeAttribute();
 
         return $this->getAttributesString();
+    }
+
+    public function computeRendermodeAttribute()
+    {
+        $renderer = $this->getRenderer();
+        $this->attributes['data-rendermode'] = ($renderer->getMode() !== null) ? $renderer->getMode() : 'default';
     }
 
     /**
