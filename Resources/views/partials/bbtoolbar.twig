@@ -10,10 +10,7 @@
     <link href="{{ this.getResourceUrl('toolbar/dist/css/bb-ui-login' ~ isMin ~ '.css') }}" rel="stylesheet">
 {% endif %}
 
-<script
-    data-main="{{ this.getResourceUrl('toolbar/dist/config' ~ isMin ~ '.js') }}"
-    src="{{ this.getResourceUrl('toolbar/dist/require.js') }}"
-></script>
+<script src="{{ this.getResourceUrl('toolbar/dist/require.js') }}"></script>
 
 <div id="{{ wrapper }}"
     data-api="{{ this.getUri('/rest/2/') }}"
@@ -39,4 +36,6 @@
             <div id="circularG_8" class="circularG"></div>
         </div>
     </div>
+    
+    <script src="{{ this.getResourceUrl('toolbar/dist/config' ~ isMin ~ '.js') }}"></script>
 </div>
