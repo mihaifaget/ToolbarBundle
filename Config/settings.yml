@@ -54,6 +54,7 @@ component:
     medialibrary:
         available_media:
           - {title: 'Image', type: 'Media/Image', ico: 'fa fa-picture'}
+          - {title: 'Pdf', type: 'Media/Pdf', ico: 'fa fa-file-pdf-o'}
 
     translator:
         base: '$resources-baseurl$/toolbar/src/tb/i18n/'
@@ -62,11 +63,6 @@ component:
             en_US: 'EN'
             fr_FR: 'FR'
             ru_RU: 'RU'
-
-    medialibrary:
-        available_media:
-            - { 'type': 'Media/Image', 'title': 'Image' }
-
 
 unclickable_contents:
     contents:
