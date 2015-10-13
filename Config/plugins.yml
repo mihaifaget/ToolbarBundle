@@ -50,9 +50,11 @@ core:
                             - {name: 'about'}
                         removePlugins: 'colorbutton,find,flash,font,forms,iframe,newpage,removeformat,smiley,specialchar,stylescombo,templates'
                         removeButtons: 'About,Anchor'
+                        extraAllowedContent: 'span(*)[id];div(*)[id];p(*)[id]'
                     lite:
                         title: "lite editor"
                         toolbarGroups: []
                         removePlugins: 'colorbutton,specialchar,links'
                         removeButtons: 'About,Anchor'
+                        extraAllowedContent: 'span(*)[id];div(*)[id];p(*)[id]'
 demo: []
