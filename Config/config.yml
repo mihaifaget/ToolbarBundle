@@ -8,6 +8,7 @@ bundle:
     bundle_loader_recipes:
         helper: [BackBee\Bundle\ToolbarBundle\Toolbar, loadHelpers]
         template: [BackBee\Bundle\ToolbarBundle\Toolbar, loadTemplates]
+        resource: [BackBee\Bundle\ToolbarBundle\Toolbar, loadResources]
 
     ##
     # This part of config file is for debug the javascript
