@@ -62,7 +62,11 @@ class UserListener
                 $application->getSite()
             );
 
-            $application->getMailer()->send($message);
+            if (null !== $application->getMailer()) {
+                $application->getMailer()->send($message);
+            } else {
+                throw new \RuntimeException('Mailer not available');
+            }
         }
     }
 
