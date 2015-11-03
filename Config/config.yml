@@ -17,3 +17,4 @@ bundle:
     # If you set debug true be sure to have correctly installed the javascript development envirronment see README.md => https://github.com/backbee/BbCoreJs
     ##
     debug: false
+    disable_bo: false
