@@ -47,9 +47,10 @@ core:
                             - {name: 'editing', groups: ['basicstyles', 'links']}
                             - {name: 'undo'}
                             - {name: 'clipboard', groups: ['selection', 'clipboard']}
+                            - {name: 'insert', groups: ['table']}
                             - {name: 'about'}
                         removePlugins: 'colorbutton,find,flash,font,forms,iframe,newpage,removeformat,smiley,specialchar,stylescombo,templates'
-                        removeButtons: 'About,Anchor'
+                        removeButtons: 'About,Anchor,Image,HorizontalRule,SpecialChar'
                         extraAllowedContent: 'span(*)[id];div(*)[id];p(*)[id];h1(*)[id];h2(*)[id];h3(*)[id];h4(*)[id];h5(*)[id];ol(*)[id];ul(*)[id];li(*)[id]'
                     lite:
                         title: "lite editor"
