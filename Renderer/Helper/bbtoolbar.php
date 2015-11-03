@@ -39,6 +39,7 @@ class bbtoolbar extends AbstractHelper
      */
     public function __invoke()
     {
+
         $settings = $this->getRenderer()
                          ->getApplication()
                          ->getContainer()
@@ -46,7 +47,12 @@ class bbtoolbar extends AbstractHelper
                          ->getSection('settings');
         
         $wrapper = (isset($settings['wrapper_toolbar_id'])) ? $settings['wrapper_toolbar_id'] : '';
+
+        /* add option bo connect */
+        $config = $this->getRenderer()->getApplication()->getContainer()->get('bundle.toolbar.config')->getBundleConfig();
+        $disableToolbar = (isset($config['disable_toolbar'])) ? $config['disable_toolbar'] : false;
+
         
-        return $this->getRenderer()->partial('partials/bbtoolbar.twig', array('wrapper' => $wrapper));
+        return $this->getRenderer()->partial('partials/bbtoolbar.twig', array('wrapper' => $wrapper, 'disableToolbar' => $disableToolbar));
     }
 }
