@@ -50,9 +50,9 @@ class bbtoolbar extends AbstractHelper
 
         /* add option bo connect */
         $config = $this->getRenderer()->getApplication()->getContainer()->get('bundle.toolbar.config')->getBundleConfig();
-        $disable_bo = (isset($config['disable_bo'])) ? $config['disable_bo'] : false;
+        $disableToolbar = (isset($config['disable_toolbar'])) ? $config['disable_toolbar'] : false;
 
         
-        return $this->getRenderer()->partial('partials/bbtoolbar.twig', array('wrapper' => $wrapper, 'disable_bo' => $disable_bo));
+        return $this->getRenderer()->partial('partials/bbtoolbar.twig', array('wrapper' => $wrapper, 'disableToolbar' => $disableToolbar));
     }
 }
