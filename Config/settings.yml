@@ -70,7 +70,10 @@ unclickable_contents:
         - 'Element/Attachment'
         - 'Element/Date'
         - 'Element/File'
-        - 'Element/Image'
         - 'Element/Keyword'
         - 'Element/Link'
         - 'Element/Select'
+
+contents_events:
+    rules:
+    - { type: 'Element/Image', target: 'parent', events: 'context'}
