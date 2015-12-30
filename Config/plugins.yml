@@ -15,6 +15,10 @@ core:
         accept: ['*']
         config: []
 
+    contentsplitter:
+      accept: ['*']
+      config: []
+
     remove:
         accept: ['*']
         config: []
