@@ -35,6 +35,10 @@ core:
        accept: ['*']
        config: []
 
+    infos:
+       accept: ['*']
+       config: []
+
     rte:
         accept: ['*']
         config:
