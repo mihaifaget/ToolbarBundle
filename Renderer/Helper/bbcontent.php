@@ -134,8 +134,16 @@ class bbcontent extends AbstractHelper
         $this->computeDragAndDropAttributes();
         $this->computeIdentifierAttribute();
         $this->computeRendermodeAttribute();
+        $this->computeAcceptAttribute();
 
         return $this->getAttributesString();
+    }
+
+    public function computeAcceptAttribute()
+    {
+        if ($this->content instanceof ContentSet && 0 < count($this->content->getAccept())) {
+            $this->attributes['data-accept'] = implode(',', $this->content->getAccept());
+        }
     }
 
     public function computeRendermodeAttribute()
