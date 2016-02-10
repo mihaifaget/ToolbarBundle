@@ -73,6 +73,7 @@ unclickable_contents:
         - 'Element/Keyword'
         - 'Element/Link'
         - 'Element/Select'
+        - 'Element/Image'
 
 contents_events:
     rules:
