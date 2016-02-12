@@ -17,7 +17,11 @@ core:
 
     contentsplitter:
       accept: ['*']
-      config: []
+      config:
+        splittableContents:
+            - Text/Paragraph
+            - Text/ABlock
+            - Text/AnOtherContent
 
     remove:
         accept: ['*']
