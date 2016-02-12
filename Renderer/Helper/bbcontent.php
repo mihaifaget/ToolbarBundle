@@ -135,8 +135,33 @@ class bbcontent extends AbstractHelper
         $this->computeIdentifierAttribute();
         $this->computeRendermodeAttribute();
         $this->computeAcceptAttribute();
+        $this->computeRteAttribute();
 
         return $this->getAttributesString();
+    }
+
+    public function computeRteAttribute()
+    {
+        $renderer = $this->getRenderer();
+        $contentParent = $renderer->getClassContainer();
+        if (null !== $contentParent) {
+            if ($contentParent instanceof AbstractClassContent && !($contentParent instanceof ContentSet)) {
+                $elementName = $renderer->getCurrentElement();
+                if (null !== $elementName) {
+                    $contentData = $contentParent->{$elementName};
+                    /* if it's the same content */
+                    if (null !== $contentData && $contentData->getUid() === $this->content->getUid()) {
+                        if ($this->content->isElementContent()) {
+                            $defaultOptions = $contentParent->getDefaultOptions();
+
+                            if (isset($defaultOptions[$elementName]['parameters']['rte'])) {
+                                $this->attributes['data-rteconfig'] = $defaultOptions[$elementName]['parameters']['rte'];
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     public function computeAcceptAttribute()
