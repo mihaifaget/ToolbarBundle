@@ -11,6 +11,10 @@ core:
         accept: ['*']
         config: []
 
+    addtomedialibrary:
+      accept: ['*']
+      config: []
+
     contentsetplus:
         accept: ['*']
         config: []
