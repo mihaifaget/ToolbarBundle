@@ -56,6 +56,12 @@ component:
           - {title: 'Image', type: 'Media/Image', ico: 'fa fa-picture'}
           - {title: 'Pdf', type: 'Media/Pdf', ico: 'fa fa-file-pdf-o'}
 
+        add_to_library_map:
+          'Element/Image':
+            transform_into: 'Media/Image'
+            title_element: title
+            file_element: image
+
     translator:
         base: '$resources-baseurl$/toolbar/src/tb/i18n/'
         default_locale: 'en_US'
