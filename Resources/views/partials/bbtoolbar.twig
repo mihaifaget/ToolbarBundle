@@ -23,7 +23,8 @@
         data-site-uid="{{ this.getCurrentPage().getSite().getUid() }}"
         data-page-uid="{{ this.getCurrentPage().getUid() }}"
         data-layout-uid="{{ this.getCurrentPage().getLayout().getUid() }}"
-        data-root-uid="{{ this.getCurrentPage().getRoot().getUid() }}"
+        data-root-uid="{{ this.getCurrentPage().getRoot().getUid() }}",
+        data-parent-uid="{{ this.getCurrentPage().getParent().getUid() }}"
     {% endif %}
 >
     <div id="backbee-loader">
@@ -38,7 +39,7 @@
             <div id="circularG_8" class="circularG"></div>
         </div>
     </div>
-    
+
     <script src="{{ this.getResourceUrl('toolbar/dist/config' ~ isMin ~ '.js') }}"></script>
 </div>
 {% endif %}
