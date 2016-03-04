@@ -118,7 +118,8 @@ class bbcontent extends AbstractHelper
     {
         $this->attributes = [
             'class'              => [],
-            'data-bb-identifier' => null
+            'data-bb-identifier' => null,
+            'data-bb-maxentry' => null
         ];
 
         $this->content = null;
@@ -133,6 +134,7 @@ class bbcontent extends AbstractHelper
         $this->computeClassAttribute();
         $this->computeDragAndDropAttributes();
         $this->computeIdentifierAttribute();
+        $this->computeMaxEntryAttribute();
         $this->computeRendermodeAttribute();
         $this->computeAcceptAttribute();
         $this->computeRteAttribute();
@@ -223,6 +225,16 @@ class bbcontent extends AbstractHelper
     {
         $data = $this->content->jsonSerialize();
         $this->attributes['data-bb-identifier'] = str_replace('\\', '/', $data['type']) . '(' . $data['uid'] . ')';
+    }
+
+    /**
+     * Computes classcontent maxentry attribute if classcontent is a ContentSet and sets it to attributes property array
+     */
+    private function computeMaxEntryAttribute()
+    {
+        if ($this->content instanceof ContentSet) {
+            $this->attributes['data-bb-maxentry'] = $this->content->getMaxEntry();
+        }
     }
 
     /**
